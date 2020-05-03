@@ -12,7 +12,7 @@ extern "C" {
 
     enum ACS712_type {ACS712_05B, ACS712_20A, ACS712_30A};
     void mgos_acs712_setup(uint8_t _pin);
-    float mgos_acs712_get_current_dc(enum ACS712_type type, uint8_t _pin);
+    float mgos_acs712_get_current(enum ACS712_type type, uint8_t _pin);
 
 #ifdef __cplusplus
 }
