@@ -1,3 +1,4 @@
+name: acs712
 author: Apoorva Singh <apoorvasingh@thepodnet.com>
 type: lib
 description: A library to talk to ACS712 current sensor
@@ -5,13 +6,14 @@ version: 0.1
 
 sources:
   - src
-filesystem:
-  - fs
-config_schema:
+
+includes:
+  - include
+
 libs:
   - origin: https://github.com/mongoose-os-libs/adc
+
 tags:
   - c
-  - docs:misc:Empty
 
 manifest_version: 2017-09-29
