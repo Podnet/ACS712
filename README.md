@@ -1,7 +1,6 @@
-# A blank Mongoose OS library
+# ACS712 Mongoose OS library
 
 
 ## Overview
 
-This blank library is intended to be used as a skeleton for deleloping
-Mongoose OS libraries.
+This library talks to ACS712 sensor and calculates the required current values.

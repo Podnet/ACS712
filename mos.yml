@@ -1,7 +1,7 @@
-author: mongoose-os
+author: Apoorva Singh <apoorvasingh@thepodnet.com>
 type: lib
-description: An empty lib that does nothing
-version: 1.0
+description: A library to talk to ACS712 current sensor
+version: 0.1
 
 sources:
   - src
@@ -9,7 +9,7 @@ filesystem:
   - fs
 config_schema:
 libs:
-
+  - origin: https://github.com/mongoose-os-libs/adc
 tags:
   - c
   - docs:misc:Empty
