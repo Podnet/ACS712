@@ -14,6 +14,8 @@ void mgos_acs712_setup(uint8_t _pin) {
 	for (int i = 0; i < 10; i++) {
 		DBG(("ACS712 acc value old: %d", acc));
 		acc = acc + mgos_adc_read(_pin);
+		// Wait for sometime then read the ADC values, otherwise read value will always be 0
+		mgos_msleep(50);
 		DBG(("ACS712 acc value new: %d", acc));
 	}
 	mgos_acs712_zero_point = acc / 10;
