@@ -7,12 +7,17 @@ int mgos_acs712_zero_point;
 
 
 void mgos_acs712_setup(uint8_t _pin) {
-  mgos_adc_enable(_pin);
-  uint16_t acc = 0;
+    // Enabling ADC on pin
+    mgos_adc_enable(_pin);
+
+    int acc = 0;
 	for (int i = 0; i < 10; i++) {
-		acc += mgos_adc_read(_pin);
+		DBG(("ACS712 acc value old: %d", acc));
+		acc = acc + mgos_adc_read(_pin);
+		DBG(("ACS712 acc value new: %d", acc));
 	}
 	mgos_acs712_zero_point = acc / 10;
+	DBG(("ACS712 Calibration value : %d", mgos_acs712_zero_point));
 }
 
 
