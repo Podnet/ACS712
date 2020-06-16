@@ -56,6 +56,3 @@ float mgos_acs712_get_current(enum ACS712_type type, uint8_t _pin) {
 }
 
 
-bool mgos_acs712_init(void) {
-  return true;
-}
